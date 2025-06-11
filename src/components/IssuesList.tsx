@@ -6,7 +6,6 @@ export default function IssuesList() {
 
   return (
     <View style={styles.container}>
-      <Text>Hello world!</Text>
       <FlatList
         data={issues}
         keyExtractor={(item) => item.id.toString()}
@@ -28,8 +27,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    paddingTop: 350,
-    paddingLeft: 140,
+    paddingTop: 50,
+    paddingLeft: 10,
   },
   listContent: {
     paddingBottom: 20,
