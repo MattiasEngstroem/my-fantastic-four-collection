@@ -4,15 +4,20 @@ import IssuesList from "./src/components/IssuesList";
 import { IssuesProvider } from "./src/context/IssuesContext";
 import { NavigationContainer } from "@react-navigation/native";
 import StackNavigator from "./src/navigation/StackNavigator";
+import { CollectionProvider } from "./src/context/CollectionContext";
+import { WantlistProvider } from "./src/context/WantlistContext";
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <StackNavigator />
-      {/*<IssuesProvider>
-        <IssuesList />
-      </IssuesProvider>*/}
-    </NavigationContainer>
+    <IssuesProvider>
+      <CollectionProvider>
+        <WantlistProvider>
+          <NavigationContainer>
+            <StackNavigator />
+          </NavigationContainer>
+        </WantlistProvider>
+      </CollectionProvider>
+    </IssuesProvider>
   );
 }
 
