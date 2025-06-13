@@ -5,11 +5,11 @@ import { RootStackParamList } from "../navigation/StackNavigator";
 
 type IssueDetailsRouteProp = RouteProp<RootStackParamList, "IssueDetails">;
 
-type Props = {
+type IssueDetailsProps = {
   route: IssueDetailsRouteProp;
 };
 
-export default function IssueDetails({ route }: Props) {
+export default function IssueDetails({ route }: IssueDetailsProps) {
   const { itemId } = route.params;
 
   return <Text>IssueDetails</Text>;

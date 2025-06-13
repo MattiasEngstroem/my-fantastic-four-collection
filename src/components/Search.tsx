@@ -13,19 +13,15 @@ export default function Search() {
 
   const allIssues = useIssues().issues;
 
-  const handleChange = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
-  ) => {
-    const { name, value } = event.target;
-    if (name === "year") {
-      setYear(value);
-    } else if (name === "name") {
-      setName(value);
-    }
+  const handleYearChange = (value: string) => {
+    setYear(value);
   };
 
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    event.preventDefault();
+  const handleNameChange = (value: string) => {
+    setName(value);
+  };
+
+  const handleClick = () => {
     setHasSearched(true);
 
     if (year === "all") {
@@ -49,7 +45,8 @@ export default function Search() {
       <SearchForm
         year={year}
         name={name}
-        handleChange={handleChange}
+        handleYearChange={handleYearChange}
+        handleNameChange={handleNameChange}
         handleClick={handleClick}
       />
       {hasSearched && <CardContainer arrayToRender={results} />}
