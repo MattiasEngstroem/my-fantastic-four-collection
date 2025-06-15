@@ -34,5 +34,4 @@ export type collectionItem = {
   grade: string;
   comment: string;
   condition: string;
-  pages: number;
 };

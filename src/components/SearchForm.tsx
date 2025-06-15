@@ -52,6 +52,7 @@ export default function SearchForm({
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: "#faf4e6",
     paddingTop: 25,
     padding: 16,
     gap: 12,
