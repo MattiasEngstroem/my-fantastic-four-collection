@@ -3,7 +3,7 @@ import SearchForm from "./SearchForm";
 import { issueObject } from "../types/types";
 import { useIssues } from "../hooks/useIssues";
 import CardContainer from "./CardContainer";
-import { View } from "react-native";
+import { View, StatusBar } from "react-native";
 
 export default function Search() {
   const [year, setYear] = useState("all");

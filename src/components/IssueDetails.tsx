@@ -6,8 +6,6 @@ import {
   Image,
   StyleSheet,
   ScrollView,
-  KeyboardAvoidingView,
-  Platform,
 } from "react-native";
 import { RouteProp } from "@react-navigation/native";
 import { RootStackParamList } from "../navigation/StackNavigator";
